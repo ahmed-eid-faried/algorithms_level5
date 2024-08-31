@@ -151,9 +151,14 @@ private:
 		// Adjust head to point to the new head of the list
 		head = temp;
 	}
-	void _UpdateItem(int index, T value) {
+	bool _UpdateItem(int index, T value) {
 		Node* Item = _GetNode(_head, index);
-		Item->value = value;
+		if (Item != NULL) {
+			Item->value = value;
+			return true;
+		}
+		else { return false; }
+
 	}
 	//static int _Size(Node* head) {
 	//	//int Counter = 0;
@@ -180,47 +185,9 @@ public:
 	void Reverse() { return _Reverse(_head); }
 	Node* GetNode(int index) { return _GetNode(_head, index); }
 	T GetItem(int index) { return _GetItem(_head, index); }
-	void UpdateItem(int index, T value) { _UpdateItem(index, value); }
+	bool UpdateItem(int index, T value) { return _UpdateItem(index, value); }
 };
-// Example usage
-void DblLinkedListEx() {
-	clsDblLinkedList<int> MydblLinkedList;
-	MydblLinkedList.InsertAtBeginning(5);
-	MydblLinkedList.InsertAtBeginning(4);
-	MydblLinkedList.InsertAtBeginning(3);
-	MydblLinkedList.InsertAtBeginning(2);
-	MydblLinkedList.InsertAtBeginning(1);
-	cout << "\nLinked List Content:\n";
-	MydblLinkedList.PrintList();
-	clsDblLinkedList<int>::Node* N1 = MydblLinkedList.Find(2);
-	if (N1 != nullptr)
-		cout << "\nNode with value 2 is Found :-)\n";
-	else
-		cout << "\nNode is not found :-(\n";
-	MydblLinkedList.InsertAfter(N1, 500);
-	cout << "\nAfter Inserting 500 after 2:\n";
-	MydblLinkedList.PrintList();
-	MydblLinkedList.InsertAtEnd(700);
-	cout << "\nAfter Inserting 700 at end:\n";
-	MydblLinkedList.PrintList();
-	clsDblLinkedList<int>::Node* N2 = MydblLinkedList.Find(4);
-	MydblLinkedList.DeleteNode(N2);
-	cout << "\nAfter Deleting 4:\n";
-	MydblLinkedList.PrintList();
-	MydblLinkedList.DeleteFirstNode();
-	cout << "\nAfter Deleting First Node:\n";
-	MydblLinkedList.PrintList();
-
-	cout << "\nAfter Deleting Last Node:\n";
-	MydblLinkedList.DeleteLastNode();
-	MydblLinkedList.PrintList();
-
-	cout << "\nSize of DblLinkedList:\n";
-	cout << MydblLinkedList.Size() << endl;
-
-}
-
-
+ 
 
 template <class T>
 class clsDblLinkedList2

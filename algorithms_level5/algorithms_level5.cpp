@@ -7,6 +7,7 @@
 #include "1-ex4.h"
 #include "1-ex5.h"
 #include "1-ex6.h"
+#include "DblLinkedListEx.h"
 
 int main()
 {
@@ -16,7 +17,8 @@ int main()
     //DblLinkedListClear();
     //DblLinkedListReverse();
     //DblLinkedListGetNodeByIndex();
-    DblLinkedListGetItemByIndex();
+    //DblLinkedListGetItemByIndex();
+    DblLinkedListUpdateItem();
 
 }
  
