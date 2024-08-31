@@ -32,6 +32,7 @@ private:
 		return nullptr;
 	}
 	Node* _GetNode(Node* head, int index) {
+		if (index > _Size || index < 0)return NULL;
 		int counter = 0;
 		while (head != nullptr && head->next != nullptr) {
 			if (counter == index)return head;

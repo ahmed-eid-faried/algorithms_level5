@@ -21,7 +21,7 @@ void  DblLinkedListGetNodeByIndex()
 
 	clsDblLinkedList <int> ::Node* N;
 
-	N = MydblLinkedList.GetNode(1);
+	N = MydblLinkedList.GetNode(3);
 
 	cout << "\nNode Value is: " << N->value<<endl;
 
