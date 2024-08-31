@@ -20,5 +20,4 @@ void  DblLinkedListGetItemByIndex()
 
 	cout << "\nItem(2) Value is: " << MydblLinkedList.GetItem(2);
 
-
 }
