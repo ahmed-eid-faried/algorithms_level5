@@ -12,6 +12,7 @@
 #include "1-ex8.h"
 #include "clsMyQueueEx.h"
 #include "clsMyQueueExtensions.h"
+#include "clsMyStackEx.h"
 
 int main()
 {
@@ -26,7 +27,9 @@ int main()
     //DblLinkedListInsertAfterByIndex();
     ///////////////////////////////////
     //clsMyQueueEx();
-    clsMyQueueExtensions();
+    //clsMyQueueExtensions();
+    ///////////////////////////////////
+    clsMyStackEx();
 
 }
  

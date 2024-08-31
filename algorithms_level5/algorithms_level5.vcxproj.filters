@@ -71,5 +71,8 @@
     <ClInclude Include="clsMyStack.h">
       <Filter>Header Files\DS</Filter>
     </ClInclude>
+    <ClInclude Include="clsMyStackEx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

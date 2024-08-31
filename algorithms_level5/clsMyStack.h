@@ -24,6 +24,6 @@ public:
 	bool UpdateItem(int index, T value) { return _MyStack.UpdateItem(index, value); }
 	T InsertAfter(int index, T value) { return _MyStack.InsertAfter(index, value); }
 	void InsertAtFront(T value) { _MyStack.InsertAtBeginning(value); }
-	void InsertAtBack(T value) { push(value); }
+	void InsertAtBack(T value) { _MyStack.InsertAtEnd(value); }
 	void Clear() { return _MyStack.Clear(); }
 };

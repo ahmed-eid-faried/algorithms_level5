@@ -22,6 +22,6 @@ public:
 	bool UpdateItem(int index, T value) { return _MyQueue.UpdateItem(index, value); }
 	T InsertAfter(int index, T value) { return _MyQueue.InsertAfter(index, value); }
 	void InsertAtFront(T value) { _MyQueue.InsertAtBeginning(value); }
-	void InsertAtBack(T value) { push(value); }
+	void InsertAtBack(T value) { _MyQueue.InsertAtEnd(value); }
 	void Clear() { return _MyQueue.Clear(); }
 };
