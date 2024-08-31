@@ -114,6 +114,10 @@ private:
 		delete temp;
 		_Size--;
 	}
+	void _Clear() {
+		//for (int i = 0; i < _Size; i++) { _DeleteFirstNode(_head); }
+		while (_Size > 0) { _DeleteFirstNode(_head); }
+	}
 	//static int _Size(Node* head) {
 	//	//int Counter = 0;
 	//	//while (head != nullptr) {
@@ -137,6 +141,9 @@ public:
 		return _Size;
 	}
 	bool IsEmpty() { return _Size == 0; }
+	void Clear() {
+		return _Clear();
+	}
 };
 // Example usage
 void DblLinkedListEx() {
