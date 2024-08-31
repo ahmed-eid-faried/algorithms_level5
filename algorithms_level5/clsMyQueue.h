@@ -14,10 +14,10 @@ public:
 	void Print() { _MyQueue.PrintList(); }
 	void push(T value) { _MyQueue.InsertAtEnd(value); }
 	void pop() { _MyQueue.DeleteFirstNode(); }
-	int size() { return _MyQueue.Size(); }
+	int Size() { return _MyQueue.Size(); }
 	bool IsEmpty() { return _MyQueue.IsEmpty(); }
 	T front() { return _MyQueue.GetItem(0); }
-	T back() { return _MyQueue.GetItem(_MyQueue.Size() - 1); }
+	T back() { return _MyQueue.GetItem(Size() - 1); }
 
 	//void InsertAtBeginning(T value) { _InsertAtBeginning(_head, value); }
 	//Node* Find(T value) { return _Find(_head, value); }

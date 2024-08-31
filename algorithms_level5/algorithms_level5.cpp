@@ -10,6 +10,7 @@
 #include "DblLinkedListEx.h"
 #include "1-ex7.h"
 #include "1-ex8.h"
+#include "clsMyQueueEx.h"
 
 int main()
 {
@@ -21,7 +22,9 @@ int main()
     //DblLinkedListGetNodeByIndex();
     //DblLinkedListGetItemByIndex();
     //DblLinkedListUpdateItem();
-    DblLinkedListInsertAfterByIndex();
+    //DblLinkedListInsertAfterByIndex();
+    ///////////////////////////////////
+    clsMyQueueEx();
 
 }
  
