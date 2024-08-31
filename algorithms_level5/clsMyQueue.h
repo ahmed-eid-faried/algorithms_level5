@@ -2,8 +2,7 @@
 #include <iostream>
 #include "clsDblLinkedList.h"
 using namespace std;
-//  back front  
-//  1 2 3 4 5
+
 
 template<class T>
 class clsMyQueue {
@@ -18,7 +17,6 @@ public:
 	bool IsEmpty() { return _MyQueue.IsEmpty(); }
 	T front() { return _MyQueue.GetItem(0); }
 	T back() { return _MyQueue.GetItem(Size() - 1); }
-
 	T GetItem(int index) { return _MyQueue.GetItem(index); }
 	void Reverse() { return _MyQueue.Reverse(); }
 	bool UpdateItem(int index, T value) { return _MyQueue.UpdateItem(index, value); }
@@ -26,7 +24,4 @@ public:
 	void InsertAtFront(T value) { _MyQueue.InsertAtBeginning(value); }
 	void InsertAtBack(T value) { push(value); }
 	void Clear() { return _MyQueue.Clear(); }
-
- 
-
 };

@@ -142,6 +142,7 @@
     <ClInclude Include="clsMyQueue.h" />
     <ClInclude Include="clsMyQueueEx.h" />
     <ClInclude Include="clsMyQueueExtensions.h" />
+    <ClInclude Include="clsMyStack.h" />
     <ClInclude Include="DblLinkedListEx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
