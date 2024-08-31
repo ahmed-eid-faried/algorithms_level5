@@ -3,7 +3,7 @@
 #include "clsDblLinkedList.h"
 using namespace std;
 
-
+//push pop print size front back
 void  DblLinkedListInsertAfterByIndex()
 {
 	clsDblLinkedList <int> MydblLinkedList;
