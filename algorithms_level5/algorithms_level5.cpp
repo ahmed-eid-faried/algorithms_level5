@@ -4,13 +4,15 @@
 #include "1-ex1.h"
 #include "1-ex2.h"
 #include "1-ex3.h"
+#include "1-ex4.h"
 
 int main()
 {
      //DblLinkedListEx();
     //DblLinkedListSize();
     //DblLinkedListIsEmpty();
-    DblLinkedListClear();
+    //DblLinkedListClear();
+    DblLinkedListReverse();
 
 }
  

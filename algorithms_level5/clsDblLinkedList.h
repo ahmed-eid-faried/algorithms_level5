@@ -118,6 +118,25 @@ private:
 		//for (int i = 0; i < _Size; i++) { _DeleteFirstNode(_head); }
 		while (_Size > 0) { _DeleteFirstNode(_head); }
 	}
+	void _SwapNode(Node*& N) {
+		Node* temp = N->next;
+		N->next = N->prev;
+		N->prev = temp;
+	}
+	void _Reverse(Node*& head) {
+		//empty or one item
+		if (head == nullptr || head->next == nullptr) return;
+		Node* current = head;
+		Node* temp = nullptr;
+		// Swap next and prev for all nodes in the list
+		while (current != nullptr) {
+			_SwapNode(current);
+			temp = current; // Save the last node (new head)
+			current = current->prev; // Move to the next node (in reversed direction)
+		}
+		// Adjust head to point to the new head of the list
+		head = temp;
+	}
 	//static int _Size(Node* head) {
 	//	//int Counter = 0;
 	//	//while (head != nullptr) {
@@ -141,9 +160,8 @@ public:
 		return _Size;
 	}
 	bool IsEmpty() { return _Size == 0; }
-	void Clear() {
-		return _Clear();
-	}
+	void Clear() { return _Clear(); }
+	void Reverse() { return _Reverse(_head); }
 };
 // Example usage
 void DblLinkedListEx() {
