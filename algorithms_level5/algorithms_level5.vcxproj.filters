@@ -16,6 +16,9 @@
     <Filter Include="Header Files\DS">
       <UniqueIdentifier>{7758c9a8-8a2b-42b4-916d-40ae88fb44ab}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\soln">
+      <UniqueIdentifier>{fe917a4b-f20d-467f-bd20-5098e1936ae1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="algorithms_level5.cpp">
@@ -25,6 +28,9 @@
   <ItemGroup>
     <ClInclude Include="clsDblLinkedList.h">
       <Filter>Header Files\DS</Filter>
+    </ClInclude>
+    <ClInclude Include="1-ex1.h">
+      <Filter>Header Files\soln</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

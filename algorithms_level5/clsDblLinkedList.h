@@ -10,10 +10,12 @@ public:
 		Node* prev;
 		Node* next;
 	};
+protected:
+	int _Size = 0;
 
 private:
 	Node* _head = nullptr;
-	static void _PrintList(Node* head) {
+	void _PrintList(Node* head) {
 		cout << "NULL <--> ";
 		while (head != nullptr) {
 			cout << head->value << " <--> ";
@@ -21,7 +23,15 @@ private:
 		}
 		cout << "NULL " << endl;
 	}
-	static void _InsertAtBeginning(Node*& head, T value) {
+	Node* _Find(Node* head, T value) {
+		while (head != nullptr) {
+			if (head->value == value)
+				return head;
+			head = head->next;
+		}
+		return nullptr;
+	}
+	void _InsertAtBeginning(Node*& head, T value) {
 		Node* newNode = new Node();
 		newNode->value = value;
 		newNode->prev = nullptr;
@@ -30,16 +40,9 @@ private:
 			head->prev = newNode;
 		}
 		head = newNode;
+		_Size++;
 	}
-	static Node* _Find(Node* head, T value) {
-		while (head != nullptr) {
-			if (head->value == value)
-				return head;
-			head = head->next;
-		}
-		return nullptr;
-	}
-	static void _InsertAfter(Node* current, T value) {
+	void _InsertAfter(Node* current, T value) {
 		if (current == nullptr) return;
 		Node* newNode = new Node();
 		newNode->value = value;
@@ -49,8 +52,9 @@ private:
 			current->next->prev = newNode;
 		}
 		current->next = newNode;
+		_Size++;
 	}
-	static void _InsertAtEnd(Node*& head, T value) {
+	void _InsertAtEnd(Node*& head, T value) {
 		Node* newNode = new Node();
 		newNode->value = value;
 		newNode->next = nullptr;
@@ -66,8 +70,9 @@ private:
 			current->next = newNode;
 			newNode->prev = current;
 		}
+		_Size++;
 	}
-	static void _DeleteNode(Node*& head, Node*& NodeToDelete) {
+	void _DeleteNode(Node*& head, Node*& NodeToDelete) {
 		if (head == nullptr || NodeToDelete == nullptr) return;
 		if (head == NodeToDelete) {
 			head = NodeToDelete->next;
@@ -80,8 +85,9 @@ private:
 		}
 		delete NodeToDelete;
 		NodeToDelete = nullptr;
+		_Size--;
 	}
-	static void _DeleteLastNode(Node*& head) {
+	void _DeleteLastNode(Node*& head) {
 		if (head == nullptr) return;
 		if (head->next == nullptr) {
 			delete head;
@@ -96,8 +102,9 @@ private:
 			current->prev->next = nullptr;
 		}
 		delete current;
+		_Size--;
 	}
-	static void _DeleteFirstNode(Node*& head) {
+	void _DeleteFirstNode(Node*& head) {
 		if (head == nullptr) return;
 		Node* temp = head;
 		head = head->next;
@@ -105,8 +112,17 @@ private:
 			head->prev = nullptr;
 		}
 		delete temp;
+		_Size--;
 	}
-
+	//static int _Size(Node* head) {
+	//	//int Counter = 0;
+	//	//while (head != nullptr) {
+	//	//	++Counter;
+	//	//	head = head->next;
+	//	//}
+	//	//return Counter;
+	//	return _Size;
+	//}
 public:
 	// Public methods to manipulate the list
 	void PrintList() { _PrintList(_head); }
@@ -117,6 +133,9 @@ public:
 	void DeleteNode(Node*& NodeToDelete) { _DeleteNode(_head, NodeToDelete); }
 	void DeleteLastNode() { _DeleteLastNode(_head); }
 	void DeleteFirstNode() { _DeleteFirstNode(_head); }
+	int Size() {
+		return _Size;
+	}
 };
 // Example usage
 void DblLinkedListEx() {
@@ -150,6 +169,10 @@ void DblLinkedListEx() {
 	cout << "\nAfter Deleting Last Node:\n";
 	MydblLinkedList.DeleteLastNode();
 	MydblLinkedList.PrintList();
+
+	cout << "\nSize of DblLinkedList:\n";
+	cout << MydblLinkedList.Size() << endl;
+
 }
 
 
@@ -189,7 +212,6 @@ public:
 
 
 	}
-	// Print the linked list
 	void PrintList()
 
 	{

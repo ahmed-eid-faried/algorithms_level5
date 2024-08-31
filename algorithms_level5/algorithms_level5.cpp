@@ -1,10 +1,12 @@
 
 #include <iostream>
 #include "clsDblLinkedList.h"
+#include "1-ex1.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
-    DblLinkedListEx();
+     //DblLinkedListEx();
+    DblLinkedListSize();
+    
 }
  
