@@ -41,6 +41,16 @@ private:
 		}
 		return nullptr;
 	}
+	T _GetItem(Node* head, int index) {
+		if (index > _Size || index < 0)return NULL;
+		int counter = 0;
+		while (head != nullptr && head->next != nullptr) {
+			if (counter == index)return head->value;
+			head = head->next;
+			counter++;
+		}
+		return NULL;
+	}
 	void _InsertAtBeginning(Node*& head, T value) {
 		Node* newNode = new Node();
 		newNode->value = value;
@@ -166,13 +176,12 @@ public:
 	void DeleteNode(Node*& NodeToDelete) { _DeleteNode(_head, NodeToDelete); }
 	void DeleteLastNode() { _DeleteLastNode(_head); }
 	void DeleteFirstNode() { _DeleteFirstNode(_head); }
-	int Size() {
-		return _Size;
-	}
+	int Size() { return _Size; }
 	bool IsEmpty() { return _Size == 0; }
 	void Clear() { return _Clear(); }
 	void Reverse() { return _Reverse(_head); }
 	Node* GetNode(int index) { return _GetNode(_head, index); }
+	T GetItem(int index) { return _GetItem(_head, index); }
 };
 // Example usage
 void DblLinkedListEx() {

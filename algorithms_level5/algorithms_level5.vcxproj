@@ -135,6 +135,7 @@
     <ClInclude Include="1-ex3.h" />
     <ClInclude Include="1-ex4.h" />
     <ClInclude Include="1-ex5.h" />
+    <ClInclude Include="1-ex6.h" />
     <ClInclude Include="clsDblLinkedList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
