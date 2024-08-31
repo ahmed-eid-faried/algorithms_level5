@@ -136,6 +136,7 @@ public:
 	int Size() {
 		return _Size;
 	}
+	bool IsEmpty() { return _Size == 0; }
 };
 // Example usage
 void DblLinkedListEx() {

@@ -2,10 +2,16 @@
 #include <iostream>
 #include "clsDblLinkedList.h"
 using namespace std;
-void DblLinkedListSize()
+
+void DblLinkedListIsEmpty()
 {
 
 	clsDblLinkedList <int> MydblLinkedList;
+
+	if (MydblLinkedList.IsEmpty())
+		cout << "\n\nYes List is Empty.\n";
+	else
+		cout << "\n\nNo List is not Empty.\n";
 
 	MydblLinkedList.InsertAtBeginning(5);
 	MydblLinkedList.InsertAtBeginning(4);
@@ -16,7 +22,10 @@ void DblLinkedListSize()
 	cout << "\nLinked List Contenet:\n";
 	MydblLinkedList.PrintList();
 
-	cout << "\nNumber of items in the linked list = " << MydblLinkedList.Size() << endl << endl;
+	cout << "\nNumber of items in the linked list = " << MydblLinkedList.Size();
 
-
+	if (MydblLinkedList.IsEmpty())
+		cout << "\n\nYes List is Empty.\n";
+	else
+		cout << "\n\nNo List is not Empty.\n";
 }
