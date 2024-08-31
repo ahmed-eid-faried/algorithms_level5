@@ -19,6 +19,9 @@
     <Filter Include="Header Files\soln_clsDblLinkedList">
       <UniqueIdentifier>{fe917a4b-f20d-467f-bd20-5098e1936ae1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\DS\soln">
+      <UniqueIdentifier>{6687a815-26e1-4ee3-8925-bcec8e8874b0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="algorithms_level5.cpp">
@@ -58,6 +61,9 @@
     </ClInclude>
     <ClInclude Include="clsMyQueue.h">
       <Filter>Header Files\DS</Filter>
+    </ClInclude>
+    <ClInclude Include="clsMyQueueEx.h">
+      <Filter>Header Files\DS\soln</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
