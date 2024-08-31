@@ -8,6 +8,8 @@
 #include "1-ex5.h"
 #include "1-ex6.h"
 #include "DblLinkedListEx.h"
+#include "1-ex7.h"
+#include "1-ex8.h"
 
 int main()
 {
@@ -18,7 +20,8 @@ int main()
     //DblLinkedListReverse();
     //DblLinkedListGetNodeByIndex();
     //DblLinkedListGetItemByIndex();
-    DblLinkedListUpdateItem();
+    //DblLinkedListUpdateItem();
+    DblLinkedListInsertAfterByIndex();
 
 }
  

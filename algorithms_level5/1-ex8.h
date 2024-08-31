@@ -4,7 +4,7 @@
 using namespace std;
 
 
-void  DblLinkedListUpdateItem()
+void  DblLinkedListInsertAfterByIndex()
 {
 	clsDblLinkedList <int> MydblLinkedList;
 
@@ -17,7 +17,7 @@ void  DblLinkedListUpdateItem()
 	cout << "\nLinked List Contenet:\n";
 	MydblLinkedList.PrintList();
 
-	MydblLinkedList.UpdateItem(2, 500);
+	MydblLinkedList.InsertAfter(2, 500);
 
 	cout << "\nAfter Updating Item(2): " << "\n";
 	MydblLinkedList.PrintList();

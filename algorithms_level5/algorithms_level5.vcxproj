@@ -137,6 +137,7 @@
     <ClInclude Include="1-ex5.h" />
     <ClInclude Include="1-ex6.h" />
     <ClInclude Include="1-ex7.h" />
+    <ClInclude Include="1-ex8.h" />
     <ClInclude Include="clsDblLinkedList.h" />
     <ClInclude Include="DblLinkedListEx.h" />
   </ItemGroup>

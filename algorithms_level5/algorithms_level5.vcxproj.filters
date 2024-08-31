@@ -53,5 +53,8 @@
     <ClInclude Include="1-ex7.h">
       <Filter>Header Files\soln</Filter>
     </ClInclude>
+    <ClInclude Include="1-ex8.h">
+      <Filter>Header Files\soln</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
