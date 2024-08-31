@@ -151,6 +151,10 @@ private:
 		// Adjust head to point to the new head of the list
 		head = temp;
 	}
+	void _UpdateItem(int index, T value) {
+		Node* Item = _GetNode(_head, index);
+		Item->value = value;
+	}
 	//static int _Size(Node* head) {
 	//	//int Counter = 0;
 	//	//while (head != nullptr) {
@@ -176,6 +180,7 @@ public:
 	void Reverse() { return _Reverse(_head); }
 	Node* GetNode(int index) { return _GetNode(_head, index); }
 	T GetItem(int index) { return _GetItem(_head, index); }
+	void UpdateItem(int index, T value) { _UpdateItem(index, value); }
 };
 // Example usage
 void DblLinkedListEx() {
