@@ -14,11 +14,13 @@ void  DblLinkedListInsertAfterByIndex()
 	MydblLinkedList.InsertAtBeginning(2);
 	MydblLinkedList.InsertAtBeginning(1);
 
-	cout << "\nLinked List Contenet:\n";
+	cout << "\nLinked List :\n";
 	MydblLinkedList.PrintList();
 
-	MydblLinkedList.InsertAfter(2, 500);
+ 	//clsDblLinkedList <int>::Node* N = MydblLinkedList.Find(5);
+	MydblLinkedList.InsertAfter(4, 500);
 
-	cout << "\nAfter Updating Item(2): " << "\n";
+	cout << "\nAfter Insert :\n";
 	MydblLinkedList.PrintList();
+
 }

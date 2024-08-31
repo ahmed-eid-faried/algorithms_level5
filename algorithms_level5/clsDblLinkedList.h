@@ -32,10 +32,10 @@ private:
 		return nullptr;
 	}
 	Node* _GetNode(Node* head, int index) {
-		if (index > _Size || index < 0)return NULL;
+		if (index >= _Size || index < 0) return nullptr;
 		int counter = 0;
-		while (head != nullptr && head->next != nullptr) {
-			if (counter == index)return head;
+		while (head != nullptr) {
+			if (counter == index) return head;
 			head = head->next;
 			counter++;
 		}
@@ -57,7 +57,7 @@ private:
 		_Size++;
 	}
 	void _InsertAfter(Node* current, T value) {
-		if (current == nullptr) return;
+		if (current == nullptr) { return; }
 		Node* newNode = new Node();
 		newNode->value = value;
 		newNode->next = current->next;
@@ -68,11 +68,14 @@ private:
 		current->next = newNode;
 		_Size++;
 	}
-	void _InsertAfter(int index, T value) {
+	bool _InsertAfter(int index, T value) {
 		Node* current = _GetNode(_head, index);
-		_InsertAfter(current, value);
+		if (current != NULL) {
+			_InsertAfter(current, value);
+			return true;
+		}
+		else { return false; }
 	}
-
 	void _InsertAtEnd(Node*& head, T value) {
 		Node* newNode = new Node();
 		newNode->value = value;
@@ -180,7 +183,7 @@ public:
 	void InsertAtBeginning(T value) { _InsertAtBeginning(_head, value); }
 	Node* Find(T value) { return _Find(_head, value); }
 	void InsertAfter(Node* current, T value) { _InsertAfter(current, value); }
-	void InsertAfter(int index, T value) { _InsertAfter(index, value); }
+	bool InsertAfter(int index, T value) { return _InsertAfter(index, value); }
 	void InsertAtEnd(T value) { _InsertAtEnd(_head, value); }
 	void DeleteNode(Node*& NodeToDelete) { _DeleteNode(_head, NodeToDelete); }
 	void DeleteLastNode() { _DeleteLastNode(_head); }
