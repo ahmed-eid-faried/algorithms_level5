@@ -42,14 +42,8 @@ private:
 		return nullptr;
 	}
 	T _GetItem(Node* head, int index) {
-		if (index > _Size || index < 0)return NULL;
-		int counter = 0;
-		while (head != nullptr && head->next != nullptr) {
-			if (counter == index)return head->value;
-			head = head->next;
-			counter++;
-		}
-		return NULL;
+		Node* Item = _GetNode(head, index);
+		return	((Item == nullptr) ? NULL : Item->value);
 	}
 	void _InsertAtBeginning(Node*& head, T value) {
 		Node* newNode = new Node();
