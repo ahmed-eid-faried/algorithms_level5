@@ -42,7 +42,7 @@ public:
 		// ╩═╧э╦ ╟с═╠у ┼сь ╟с═╠у ╟с╠╧э╧
 		_Size = newSize;
 	}
-	bool DeleteItem(T value) {
+	bool DeleteItem2(T value) {
 		_Size--;
 		if (_Size < 0) _Size = 0;
 		T* tempArray = new T[_Size];
@@ -60,6 +60,7 @@ public:
 		OrignalArray = tempArray;
 		return IsFind;
 	}
+
 	bool DeleteItemAt(int index) {
 		if (index >= _Size || index < 0)return false;
 		_Size--;
@@ -95,6 +96,15 @@ public:
 			if (OrignalArray[i] == value) return i;
 		}
 		return -1;
+	}
+	bool DeleteItem(T value) {
+		int index = Find(value);
+		if (index == -1) {
+			return false;
+		}
+		else {
+			return DeleteItemAt(index);
+		}
 	}
 	int Size() { return _Size; }
 
