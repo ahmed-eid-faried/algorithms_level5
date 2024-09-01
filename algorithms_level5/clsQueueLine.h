@@ -108,11 +108,30 @@ public:
 		while (!_Temp.empty())
 		{
 			cout << " " << _Temp.front().FullNumber() << " <-- ";
- 			_Temp.pop();
+			_Temp.pop();
 		}
 		cout << endl;
 	}
-	void PrintTicketsLineLTR() {}
+	void PrintTicketsLineLTR() {
+		if (QueueLine.empty())
+			cout << "\nTickets: No Tickets.";
+		else
+			cout << "\nTickets: ";
+		//we copy the queue in order not to lose the original
+		queue <clsTicket> TempQueueLine = QueueLine;
+		stack <clsTicket> TempStackLine;
+		while (!TempQueueLine.empty())
+		{
+			TempStackLine.push(TempQueueLine.front());
+			TempQueueLine.pop();
+		}
+		while (!TempStackLine.empty())
+		{
+			cout << " --> " << TempStackLine.top().FullNumber() << "  ";
+			TempStackLine.pop();
+		}
+		cout << endl;
+	}
 	void PrintAllTickets() {}
 	void ServeNextClient() {}
 };
