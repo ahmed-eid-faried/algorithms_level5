@@ -154,6 +154,8 @@
     <ClInclude Include="clsMyQueueEx.h" />
     <ClInclude Include="clsMyQueueExtensions.h" />
     <ClInclude Include="clsMyStack.h" />
+    <ClInclude Include="clsMyStackArr.h" />
+    <ClInclude Include="clsMyStackArrEx.h" />
     <ClInclude Include="clsMyStackEx.h" />
     <ClInclude Include="DblLinkedListEx.h" />
   </ItemGroup>

@@ -113,5 +113,11 @@
     <ClInclude Include="clsMyQueueArrEx.h">
       <Filter>Header Files\soln</Filter>
     </ClInclude>
+    <ClInclude Include="clsMyStackArr.h">
+      <Filter>Header Files\DS</Filter>
+    </ClInclude>
+    <ClInclude Include="clsMyStackArrEx.h">
+      <Filter>Header Files\soln</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
