@@ -14,6 +14,7 @@
 #include "clsMyQueueExtensions.h"
 #include "clsMyStackEx.h"
 #include "clsDynaminArrayEx.h"
+#include "4-ex1.h"
 
 int main()
 {
@@ -32,7 +33,10 @@ int main()
     ///////////////////////////////////
     //clsMyStackEx();
     ///////////////////////////////////
-    clsDynaminArrayEx();
+    //clsDynaminArrayEx();
+    clsDynamicArrayResize();
+    ///////////////////////////////////
+
 
 }
  

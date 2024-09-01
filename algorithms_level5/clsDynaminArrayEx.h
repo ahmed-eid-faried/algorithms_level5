@@ -1,6 +1,6 @@
+#pragma once
 #include <iostream>
 #include "clsDynamicArray.h"
-
 using namespace std;
 
 void clsDynaminArrayEx()

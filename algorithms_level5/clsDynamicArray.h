@@ -1,11 +1,12 @@
 #pragma once
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 template <class T>
 class clsDynamicArray {
 protected:
-	T* TempArray;
+	T* _TempArray;
 	int _Size = 0;
 
 public:
@@ -19,6 +20,18 @@ public:
 
 	~clsDynamicArray() {
 		delete[] OrignalArray;
+	}
+
+	void Resize(int Size) {
+		if (Size < 0)Size = 0;
+		int MinLength = min(Size, _Size);
+		_Size = Size;
+		_TempArray = OrignalArray;
+		OrignalArray = new T[_Size];
+		for (int i = 0; i < MinLength; i++)
+		{
+			OrignalArray[i] = _TempArray[i];
+		}
 	}
 
 	bool SetItem(int index, T value) {
