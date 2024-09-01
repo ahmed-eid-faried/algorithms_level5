@@ -34,7 +34,8 @@ int main()
     //clsMyStackEx();
     ///////////////////////////////////
     //clsDynaminArrayEx();
-    clsDynamicArrayResize();
+    //clsDynamicArrayResize();
+     clsDynamicArrayExtensions2();
     ///////////////////////////////////
 
 

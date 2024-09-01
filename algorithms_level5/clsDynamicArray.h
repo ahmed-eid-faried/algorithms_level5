@@ -27,7 +27,7 @@ public:
 		int minLength = min(newSize, _Size);
 
 		T* tempArray = new T[newSize];  // йнуМу ЦущФщи лоМои хгАмлЦ гАлоМо
-		
+
 		// Дсн гАзДгуя ЦД гАЦущФщи гАцуАМи еАЛ гАЦущФщи гАлоМои
 		for (int i = 0; i < minLength; i++) {
 			tempArray[i] = OrignalArray[i];
@@ -62,5 +62,18 @@ public:
 			cout << OrignalArray[i] << " ";
 		}
 		cout << endl;
+	}
+	T GetItem(int index) { return OrignalArray[index]; }
+	void Reverse() {
+		T* tempArray = new T[_Size];
+		for (int i = 0; i < _Size; i++) {
+			tempArray[i] = OrignalArray[_Size - i];
+		}
+		delete[] OrignalArray;
+		OrignalArray = tempArray;
+	}
+	void Clear() {
+		delete[] OrignalArray;
+		_Size = 0;
 	}
 };
