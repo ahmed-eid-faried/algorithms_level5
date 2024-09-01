@@ -23,6 +23,7 @@
 #include "4-ex11.h"
 #include "clsMyQueueArrEx.h"
 #include "clsMyStackArrEx.h"
+#include "undoRedo.h"
 
 int main()
 {
@@ -51,7 +52,8 @@ int main()
 	//clsDynamicArrayExtensions11();//11 to 14
 	///////////////////////////////////
 	//clsMyQueueArrEx();
-	clsMyStackArrEx();
+	//clsMyStackArrEx();
+	clsMyStringUndoRedo();
 
 
 }

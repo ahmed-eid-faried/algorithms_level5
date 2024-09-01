@@ -119,5 +119,11 @@
     <ClInclude Include="clsMyStackArrEx.h">
       <Filter>Header Files\soln</Filter>
     </ClInclude>
+    <ClInclude Include="clsMyStringUndoRedo.h">
+      <Filter>Header Files\DS</Filter>
+    </ClInclude>
+    <ClInclude Include="undoRedo.h">
+      <Filter>Header Files\soln</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

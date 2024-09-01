@@ -138,7 +138,7 @@ public:
 		_Size = 0;
 		OriginalArray = new T[_Size];
 	}
-	bool InsertAt(T index, T value) {
+	bool InsertAt(int index, T value) {
 		if (index > _Size || index < 0)	return false;
 		_Size++;
 		_TempArray = new T[_Size];

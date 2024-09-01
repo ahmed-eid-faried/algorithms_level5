@@ -157,7 +157,9 @@
     <ClInclude Include="clsMyStackArr.h" />
     <ClInclude Include="clsMyStackArrEx.h" />
     <ClInclude Include="clsMyStackEx.h" />
+    <ClInclude Include="clsMyStringUndoRedo.h" />
     <ClInclude Include="DblLinkedListEx.h" />
+    <ClInclude Include="undoRedo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
