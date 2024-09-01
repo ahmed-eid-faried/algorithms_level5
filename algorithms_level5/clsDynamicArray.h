@@ -42,20 +42,36 @@ public:
 		// ÊÍÏíË ÇáÍÌã Åáì ÇáÍÌã ÇáÌÏíÏ
 		_Size = newSize;
 	}
-	void DeleteItemAt(int index) {
+	//bool DeleteItemAt(int index) {
+	//	if (index >= _Size || index < 0)return false;
+	//	_Size--;
+	//	if (_Size < 0) _Size = 0;
+	//	T* tempArray = new T[_Size];
+	//	int counter = 0;
+	//	for (int i = 0; i < _Size; i++) {
+	//		if (counter == index) 	counter++;
+	//		tempArray[i] = OrignalArray[counter];
+	//		counter++;
+	//	}
+	//	delete[] OrignalArray;
+	//	OrignalArray = tempArray;
+	//	return true;
+	//}
+	bool DeleteItemAt(int index) {
+		if (index >= _Size || index < 0)return false;
 		_Size--;
 		if (_Size < 0) _Size = 0;
 		T* tempArray = new T[_Size];
-		int counter = 0;
-		for (int i = 0; i < _Size; i++) {
-			if (counter == index) 	counter++;
-			tempArray[i] = OrignalArray[counter];
-			counter++;
+		for (int i = 0; i < index; i++) {
+			tempArray[i] = OrignalArray[i];
+		}
+		for (int i = index + 1; i < _Size + 1; i++) {
+			tempArray[i - 1] = OrignalArray[i];
 		}
 		delete[] OrignalArray;
 		OrignalArray = tempArray;
+		return true;
 	}
-
 	bool SetItem(int index, T value) {
 		if (index >= 0 && index < _Size) {
 			OrignalArray[index] = value;
