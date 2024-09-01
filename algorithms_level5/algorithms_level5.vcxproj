@@ -145,6 +145,7 @@
     <ClInclude Include="4-ex5.h" />
     <ClInclude Include="4-ex6.h" />
     <ClInclude Include="4-ex8.h" />
+    <ClInclude Include="clsDate.h" />
     <ClInclude Include="clsDblLinkedList.h" />
     <ClInclude Include="clsDynamicArray.h" />
     <ClInclude Include="clsDynaminArrayEx.h" />
@@ -158,6 +159,7 @@
     <ClInclude Include="clsMyStackArrEx.h" />
     <ClInclude Include="clsMyStackEx.h" />
     <ClInclude Include="clsMyStringUndoRedo.h" />
+    <ClInclude Include="clsString.h" />
     <ClInclude Include="DblLinkedListEx.h" />
     <ClInclude Include="undoRedo.h" />
   </ItemGroup>
