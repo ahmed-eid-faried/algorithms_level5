@@ -79,13 +79,7 @@ public:
 		_Prefix = Prefix;
 		_AverageServeTime = AverageServeTime;
 	}
-	void IssueTicket() {
-		_TotalTickets++;
-		clsTicket ticket = clsTicket(
-			_Prefix, _TotalTickets, QueueLine.size() - 1, _AverageServeTime
-		);
-		QueueLine.push(ticket);
-	}
+
 	int TotalTickets() {
 		return  _TotalTickets;
 	}
@@ -94,6 +88,13 @@ public:
 	}
 	int WaitingClients() {
 		return   QueueLine.size() - 1;
+	}
+	void IssueTicket() {
+		_TotalTickets++;
+		clsTicket ticket = clsTicket(
+			_Prefix, _TotalTickets, WaitingClients(), _AverageServeTime
+		);
+		QueueLine.push(ticket);
 	}
 	void PrintInfo() {
 		cout << "_________________________________" << endl;
@@ -107,7 +108,6 @@ public:
 		cout << "_________________________________" << endl;
 
 	}
-
 	void PrintTicketsLineRTL() {
 		if (QueueLine.empty())
 			cout << "\nTickets: No Tickets.";
@@ -151,5 +151,7 @@ public:
 		}
 		cout << endl;
 	}
-	void ServeNextClient() {}
+	void ServeNextClient() {
+		QueueLine.pop();
+	}
 };
