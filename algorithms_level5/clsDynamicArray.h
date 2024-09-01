@@ -42,21 +42,24 @@ public:
 		// ÊÍÏíË ÇáÍÌã Åáì ÇáÍÌã ÇáÌÏíÏ
 		_Size = newSize;
 	}
-	//bool DeleteItemAt(int index) {
-	//	if (index >= _Size || index < 0)return false;
-	//	_Size--;
-	//	if (_Size < 0) _Size = 0;
-	//	T* tempArray = new T[_Size];
-	//	int counter = 0;
-	//	for (int i = 0; i < _Size; i++) {
-	//		if (counter == index) 	counter++;
-	//		tempArray[i] = OrignalArray[counter];
-	//		counter++;
-	//	}
-	//	delete[] OrignalArray;
-	//	OrignalArray = tempArray;
-	//	return true;
-	//}
+	bool DeleteItem(T value) {
+ 		_Size--;
+		if (_Size < 0) _Size = 0;
+		T* tempArray = new T[_Size];
+		int counter = 0;
+		int IsFind = false;
+		for (int i = 0; i < _Size; i++) {
+			if (OrignalArray[counter] == value) {
+				counter++;
+				IsFind = true;
+			}
+			tempArray[i] = OrignalArray[counter];
+			counter++;
+		}
+		delete[] OrignalArray;
+		OrignalArray = tempArray;
+		return IsFind;
+	}
 	bool DeleteItemAt(int index) {
 		if (index >= _Size || index < 0)return false;
 		_Size--;

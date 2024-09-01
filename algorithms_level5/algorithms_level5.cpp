@@ -18,6 +18,7 @@
 #include "4-ex2.h"
 #include "4-ex5.h"
 #include "4-ex6.h"
+#include "4-ex8.h"
 
 int main()
 {
@@ -40,7 +41,8 @@ int main()
    //clsDynamicArrayResize();
 	//clsDynamicArrayExtensions2();
 	//clsDynamicArrayExtensions5();
-	clsDynamicArrayExtensions6();
+	//clsDynamicArrayExtensions6();
+	clsDynamicArrayExtensions8();
 	///////////////////////////////////
 
 
