@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-#include "clsDblLinkedList.h"
+#include "clsDynamicArray.h"
 using namespace std;
 
 

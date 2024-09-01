@@ -21,6 +21,7 @@
 #include "4-ex8.h"
 #include "4-ex10.h"
 #include "4-ex11.h"
+#include "clsMyQueueArrEx.h"
 
 int main()
 {
@@ -46,8 +47,9 @@ int main()
 	//clsDynamicArrayExtensions6();
 	//clsDynamicArrayExtensions8();
 	//clsDynamicArrayExtensions10();
-	clsDynamicArrayExtensions11();
+	//clsDynamicArrayExtensions11();//11 to 14
 	///////////////////////////////////
+	clsMyQueueArrEx();
 
 
 }
