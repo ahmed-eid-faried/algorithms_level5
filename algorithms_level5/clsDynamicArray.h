@@ -146,7 +146,7 @@ public:
 		}
 		tempArray[index] = value;
 		//after index
-		for (int i = index; i < _Size + 1; i++) {
+		for (int i = index; i < _Size - 1; i++) {
 			tempArray[i + 1] = OrignalArray[i];
 		}
 		delete[] OrignalArray;
