@@ -63,11 +63,13 @@ public:
 		}
 		cout << endl;
 	}
-	T GetItem(int index) { return OrignalArray[index]; }
+	T GetItem(int index) {
+		return OrignalArray[index];
+	}
 	void Reverse() {
 		T* tempArray = new T[_Size];
 		for (int i = 0; i < _Size; i++) {
-			tempArray[i] = OrignalArray[_Size - i];
+			tempArray[i] = OrignalArray[_Size - 1 - i];
 		}
 		delete[] OrignalArray;
 		OrignalArray = tempArray;
@@ -75,5 +77,6 @@ public:
 	void Clear() {
 		delete[] OrignalArray;
 		_Size = 0;
+		OrignalArray = new T[_Size];
 	}
 };

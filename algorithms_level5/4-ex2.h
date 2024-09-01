@@ -5,31 +5,30 @@ using namespace std;
 
 void clsDynamicArrayExtensions2()
 {
+	clsDynamicArray <int> MyDynamicArray(5);
 
-    clsDynamicArray <int> MyDynamicArray(5);
+	MyDynamicArray.SetItem(0, 10);
+	MyDynamicArray.SetItem(1, 20);
+	MyDynamicArray.SetItem(2, 30);
+	MyDynamicArray.SetItem(3, 40);
+	MyDynamicArray.SetItem(4, 50);
 
-    MyDynamicArray.SetItem(0, 10);
-    MyDynamicArray.SetItem(1, 20);
-    MyDynamicArray.SetItem(2, 30);
-    MyDynamicArray.SetItem(3, 40);
-    MyDynamicArray.SetItem(4, 50);
+	cout << "\nIs Empty?  " << MyDynamicArray.IsEmpty();
+	cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
+	cout << "\nArray Items: \n";
 
-    cout << "\nIs Empty?  " << MyDynamicArray.IsEmpty();
-    cout << "\nArray Size: " << MyDynamicArray.Size() << "\n";
-    cout << "\nArray Items: \n";
+	MyDynamicArray.PrintList();
 
-    MyDynamicArray.PrintList();
+	cout << "\nItem(2): " << MyDynamicArray.GetItem(2) << "\n";
 
-    cout << "\nItem(2): " << MyDynamicArray.GetItem(2) << "\n";
- 
-    MyDynamicArray.Reverse();
+	MyDynamicArray.Reverse();
 
-    cout << "\nArray Items after reverse: \n";
-    MyDynamicArray.PrintList();
+	cout << "\nArray Items after reverse: \n";
+	MyDynamicArray.PrintList();
 
-    MyDynamicArray.Clear();
+	MyDynamicArray.Clear();
 
-    cout << "\nArray Items after clear: \n";
-    MyDynamicArray.PrintList();
+	cout << "\nArray Items after clear: \n";
+	MyDynamicArray.PrintList();
 
 }
