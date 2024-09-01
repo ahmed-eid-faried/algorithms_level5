@@ -68,9 +68,8 @@ public:
 	}
 	void Reverse() {
 		T* tempArray = new T[_Size];
-		for (int i = 0; i < ceil(_Size + 1 / 2); i++) {
+		for (int i = 0; i < _Size; i++) {
 			tempArray[i] = OrignalArray[_Size - 1 - i];
-			tempArray[_Size - 1 - i] = OrignalArray[i];
 		}
 		delete[] OrignalArray;
 		OrignalArray = tempArray;
