@@ -141,6 +141,15 @@ public:
 		}
 		cout << endl;
 	}
-	void PrintAllTickets() {}
+	void PrintAllTickets() {
+		if (QueueLine.empty()) cout << "\nTickets: No Tickets.";
+		queue<clsTicket>  _Temp = QueueLine;
+		while (!_Temp.empty())
+		{
+			_Temp.front().Print();
+			_Temp.pop();
+		}
+		cout << endl;
+	}
 	void ServeNextClient() {}
 };
