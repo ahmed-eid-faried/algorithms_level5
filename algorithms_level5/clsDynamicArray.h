@@ -62,15 +62,23 @@ public:
 		_Size--;
 		if (_Size < 0) _Size = 0;
 		T* tempArray = new T[_Size];
+		//before index
 		for (int i = 0; i < index; i++) {
 			tempArray[i] = OrignalArray[i];
 		}
+		//after index
 		for (int i = index + 1; i < _Size + 1; i++) {
 			tempArray[i - 1] = OrignalArray[i];
 		}
 		delete[] OrignalArray;
 		OrignalArray = tempArray;
 		return true;
+	}
+	bool DeleteFirstItem() {
+		return DeleteItemAt(0);
+	}
+	bool DeleteLastItem() {
+		return DeleteItemAt(_Size - 1);
 	}
 	bool SetItem(int index, T value) {
 		if (index >= 0 && index < _Size) {
