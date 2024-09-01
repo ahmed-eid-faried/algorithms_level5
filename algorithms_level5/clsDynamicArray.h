@@ -1,9 +1,13 @@
 #pragma once
+#include <iostream>
+using namespace std;
+
 template <class T>
 class clsDynamicArray {
 protected:
+	T* TempArray;
 	int _Size = 0;
-	T* _TempArray;
+
 public:
 	T* OrignalArray;
 
@@ -13,10 +17,16 @@ public:
 		OrignalArray = new T[_Size];
 	}
 
-	~clsDynamicArray() { delete[] OrignalArray; }
+	~clsDynamicArray() {
+		delete[] OrignalArray;
+	}
 
-	SetItem(int index, T value) {
-		OrignalArray[index] = value;
+	bool SetItem(int index, T value) {
+		if (index >= 0 && index < _Size) {
+			OrignalArray[index] = value;
+			return true;
+		}
+		else { return false; }
 	}
 
 	int Size() { return _Size; }
@@ -30,5 +40,4 @@ public:
 		}
 		cout << endl;
 	}
-
 };
