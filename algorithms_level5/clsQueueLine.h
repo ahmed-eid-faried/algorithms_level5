@@ -86,19 +86,28 @@ public:
 		);
 		QueueLine.push(ticket);
 	}
-
+	int TotalTickets() {
+		return  _TotalTickets;
+	}
+	int ServedClients() {
+		return  _TotalTickets - QueueLine.size();
+	}
+	int WaitingClients() {
+		return   QueueLine.size() - 1;
+	}
 	void PrintInfo() {
 		cout << "_________________________________" << endl;
 		cout << "            Queue info           " << endl;
 		cout << "_________________________________" << endl;
 		cout << "   Prefix          =  " << _Prefix << endl;
 		//cout << "   Prefix  =  " << _AverageServeTime << endl;
-		cout << "   Total Tickets   =  " << _TotalTickets << endl;
-		cout << "   Served Clients  =  " << _TotalTickets - QueueLine.size() << endl;
-		cout << "   Waiting Clients =  " << QueueLine.size() - 1 << endl;
+		cout << "   Total Tickets   =  " << TotalTickets() << endl;
+		cout << "   Served Clients  =  " << ServedClients() << endl;
+		cout << "   Waiting Clients =  " << WaitingClients() << endl;
 		cout << "_________________________________" << endl;
 
 	}
+
 	void PrintTicketsLineRTL() {
 		if (QueueLine.empty())
 			cout << "\nTickets: No Tickets.";
