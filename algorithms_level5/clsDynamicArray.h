@@ -133,4 +133,24 @@ public:
 		_Size = 0;
 		OrignalArray = new T[_Size];
 	}
+
+	bool InsertAt(int index, T value) {
+		if (index >= _Size || index < 0)return false;
+		_Size++;
+		if (_Size < 0) _Size = 0;
+		T* tempArray = new T[_Size];
+
+		//before index
+		for (int i = 0; i < index; i++) {
+			tempArray[i] = OrignalArray[i];
+		}
+		tempArray[index] = value;
+		//after index
+		for (int i = index; i < _Size + 1; i++) {
+			tempArray[i + 1] = OrignalArray[i];
+		}
+		delete[] OrignalArray;
+		OrignalArray = tempArray;
+		return true;
+	}
 };
