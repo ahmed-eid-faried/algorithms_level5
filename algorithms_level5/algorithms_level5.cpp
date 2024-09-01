@@ -28,33 +28,35 @@
 
 int main()
 {
-	//DblLinkedListEx();
-   //DblLinkedListSize();
-   //DblLinkedListIsEmpty();
-   //DblLinkedListClear();
-   //DblLinkedListReverse();
-   //DblLinkedListGetNodeByIndex();
-   //DblLinkedListGetItemByIndex();
-   //DblLinkedListUpdateItem();
-   //DblLinkedListInsertAfterByIndex();
+	DblLinkedListEx();
+   DblLinkedListSize();
+   DblLinkedListIsEmpty();
+   DblLinkedListClear();
+   DblLinkedListReverse();
+   DblLinkedListGetNodeByIndex();
+   DblLinkedListGetItemByIndex();
+   DblLinkedListUpdateItem();
+   DblLinkedListInsertAfterByIndex();
    ///////////////////////////////////
-   //clsMyQueueEx();
-   //clsMyQueueExtensions();
+   clsMyQueueEx();
+   clsMyQueueExtensions();
    ///////////////////////////////////
-   //clsMyStackEx();
+   clsMyStackEx();
    ///////////////////////////////////
-   //clsDynaminArrayEx();
-   //clsDynamicArrayResize();
-	//clsDynamicArrayExtensions2();
-	//clsDynamicArrayExtensions5();
-	//clsDynamicArrayExtensions6();
-	//clsDynamicArrayExtensions8();
-	//clsDynamicArrayExtensions10();
-	//clsDynamicArrayExtensions11();//11 to 14
+   clsDynaminArrayEx();
+   clsDynamicArrayResize();
+	clsDynamicArrayExtensions2();
+	clsDynamicArrayExtensions5();
+	clsDynamicArrayExtensions6();
+	clsDynamicArrayExtensions8();
+	clsDynamicArrayExtensions10();
+	clsDynamicArrayExtensions11();//11 to 14
 	///////////////////////////////////
-	//clsMyQueueArrEx();
-	//clsMyStackArrEx();
-	//clsMyStringUndoRedo();
+	clsMyQueueArrEx();
+	///////////////////////////////////
+	clsMyStackArrEx();
+	///////////////////////////////////
+	clsMyStringUndoRedo();
 	clsQueueLineEx();
 
 }
