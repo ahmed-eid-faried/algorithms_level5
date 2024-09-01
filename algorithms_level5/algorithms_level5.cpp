@@ -13,6 +13,7 @@
 #include "clsMyQueueEx.h"
 #include "clsMyQueueExtensions.h"
 #include "clsMyStackEx.h"
+#include "clsDynaminArrayEx.h"
 
 int main()
 {
@@ -29,7 +30,9 @@ int main()
     //clsMyQueueEx();
     //clsMyQueueExtensions();
     ///////////////////////////////////
-    clsMyStackEx();
+    //clsMyStackEx();
+    ///////////////////////////////////
+    clsDynaminArrayEx();
 
 }
  
