@@ -12,7 +12,7 @@ protected:
 public:
 	void Print() { _MyQueue.PrintList(); }
 	void push(T value) { _MyQueue.InsertAtEnd(value); }
-	void pop() { _MyQueue.DeleteFirstNode(); }
+	void pop() { _MyQueue.DeleteFirstItem(); }
 	int Size() { return _MyQueue.Size(); }
 	bool IsEmpty() { return _MyQueue.IsEmpty(); }
 	T front() { return _MyQueue.GetItem(0); }

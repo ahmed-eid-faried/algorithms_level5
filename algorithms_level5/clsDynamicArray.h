@@ -167,4 +167,9 @@ public:
 		if (index >= _Size)index = _Size - 1;
 		return InsertAt(index + 1, value);
 	}
+	bool UpdateItem(int index, T value) {
+		if (index >= _Size || index < 0)return false;
+		OriginalArray[index] = value;
+		return true;
+	} 
 };
