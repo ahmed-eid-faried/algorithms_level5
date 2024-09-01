@@ -22,17 +22,27 @@ public:
 		delete[] OrignalArray;
 	}
 
-	void Resize(int Size) {
-		if (Size < 0)Size = 0;
-		int MinLength = min(Size, _Size);
-		_Size = Size;
-		_TempArray = OrignalArray;
-		OrignalArray = new T[_Size];
-		for (int i = 0; i < MinLength; i++)
-		{
-			OrignalArray[i] = _TempArray[i];
+	void Resize(int newSize) {
+		if (newSize < 0) 			newSize = 0;
+		int minLength = min(newSize, _Size);
+
+		T* tempArray = new T[newSize];  // ÊÎÕíÕ ãÕÝæÝÉ ÌÏíÏÉ ÈÇáÍÌã ÇáÌÏíÏ
+		
+		// äÓÎ ÇáÚäÇÕÑ ãä ÇáãÕÝæÝÉ ÇáÃÕáíÉ Åáì ÇáãÕÝæÝÉ ÇáÌÏíÏÉ
+		for (int i = 0; i < minLength; i++) {
+			tempArray[i] = OrignalArray[i];
 		}
+
+		// ÊÍÑíÑ ÇáÐÇßÑÉ ÇáÞÏíãÉ
+		delete[] OrignalArray;
+
+		// ÊÍÏíË ÇáãÄÔÑ áíÔíÑ Åáì ÇáãÕÝæÝÉ ÇáÌÏíÏÉ
+		OrignalArray = tempArray;
+
+		// ÊÍÏíË ÇáÍÌã Åáì ÇáÍÌã ÇáÌÏíÏ
+		_Size = newSize;
 	}
+
 
 	bool SetItem(int index, T value) {
 		if (index >= 0 && index < _Size) {
