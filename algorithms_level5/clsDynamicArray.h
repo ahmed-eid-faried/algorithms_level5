@@ -43,7 +43,7 @@ public:
 		_Size = newSize;
 	}
 	bool DeleteItem(T value) {
- 		_Size--;
+		_Size--;
 		if (_Size < 0) _Size = 0;
 		T* tempArray = new T[_Size];
 		int counter = 0;
@@ -90,7 +90,12 @@ public:
 		}
 		else { return false; }
 	}
-
+	int Find(T value) {
+		for (int i = 0; i < _Size; i++) {
+			if (OrignalArray[i] == value) return i;
+		}
+		return -1;
+	}
 	int Size() { return _Size; }
 
 	bool IsEmpty() { return Size() == 0; }
