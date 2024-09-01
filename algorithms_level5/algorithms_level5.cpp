@@ -24,6 +24,7 @@
 #include "clsMyQueueArrEx.h"
 #include "clsMyStackArrEx.h"
 #include "undoRedo.h"
+#include "clsQueueLineEx.h"
 
 int main()
 {
@@ -53,7 +54,7 @@ int main()
 	///////////////////////////////////
 	//clsMyQueueArrEx();
 	//clsMyStackArrEx();
-	clsMyStringUndoRedo();
-
+	//clsMyStringUndoRedo();
+	clsQueueLineEx();
 
 }

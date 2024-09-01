@@ -159,6 +159,8 @@
     <ClInclude Include="clsMyStackArrEx.h" />
     <ClInclude Include="clsMyStackEx.h" />
     <ClInclude Include="clsMyStringUndoRedo.h" />
+    <ClInclude Include="clsQueueLine.h" />
+    <ClInclude Include="clsQueueLineEx.h" />
     <ClInclude Include="clsString.h" />
     <ClInclude Include="DblLinkedListEx.h" />
     <ClInclude Include="undoRedo.h" />
