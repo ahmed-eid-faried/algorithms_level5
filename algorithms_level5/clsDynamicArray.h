@@ -10,18 +10,16 @@ protected:
 	int _Size = 0;
 
 public:
-	T* OrignalArray;
+	T* OriginalArray;
 
 	clsDynamicArray(int Size = 0) {
 		if (Size < 0)Size = 0;
 		_Size = Size;
-		OrignalArray = new T[_Size];
+		OriginalArray = new T[_Size];
 	}
-
 	~clsDynamicArray() {
-		delete[] OrignalArray;
+		delete[] OriginalArray;
 	}
-
 	void Resize(int newSize) {
 		if (newSize < 0) 			newSize = 0;
 		int minLength = min(newSize, _Size);
@@ -30,14 +28,14 @@ public:
 
 		// äÓÎ ÇáÚäÇÕÑ ãä ÇáãÕÝæÝÉ ÇáÃÕáíÉ Åáì ÇáãÕÝæÝÉ ÇáÌÏíÏÉ
 		for (int i = 0; i < minLength; i++) {
-			tempArray[i] = OrignalArray[i];
+			tempArray[i] = OriginalArray[i];
 		}
 
 		// ÊÍÑíÑ ÇáÐÇßÑÉ ÇáÞÏíãÉ
-		delete[] OrignalArray;
+		delete[] OriginalArray;
 
 		// ÊÍÏíË ÇáãÄÔÑ áíÔíÑ Åáì ÇáãÕÝæÝÉ ÇáÌÏíÏÉ
-		OrignalArray = tempArray;
+		OriginalArray = tempArray;
 
 		// ÊÍÏíË ÇáÍÌã Åáì ÇáÍÌã ÇáÌÏíÏ
 		_Size = newSize;
@@ -49,18 +47,17 @@ public:
 		int counter = 0;
 		int IsFind = false;
 		for (int i = 0; i < _Size; i++) {
-			if (OrignalArray[counter] == value) {
+			if (OriginalArray[counter] == value) {
 				counter++;
 				IsFind = true;
 			}
-			tempArray[i] = OrignalArray[counter];
+			tempArray[i] = OriginalArray[counter];
 			counter++;
 		}
-		delete[] OrignalArray;
-		OrignalArray = tempArray;
+		delete[] OriginalArray;
+		OriginalArray = tempArray;
 		return IsFind;
 	}
-
 	bool DeleteItemAt(int index) {
 		if (index >= _Size || index < 0)return false;
 		_Size--;
@@ -68,14 +65,14 @@ public:
 		T* tempArray = new T[_Size];
 		//before index
 		for (int i = 0; i < index; i++) {
-			tempArray[i] = OrignalArray[i];
+			tempArray[i] = OriginalArray[i];
 		}
 		//after index
 		for (int i = index + 1; i < _Size + 1; i++) {
-			tempArray[i - 1] = OrignalArray[i];
+			tempArray[i - 1] = OriginalArray[i];
 		}
-		delete[] OrignalArray;
-		OrignalArray = tempArray;
+		delete[] OriginalArray;
+		OriginalArray = tempArray;
 		return true;
 	}
 	bool DeleteFirstItem() {
@@ -86,14 +83,14 @@ public:
 	}
 	bool SetItem(int index, T value) {
 		if (index >= 0 && index < _Size) {
-			OrignalArray[index] = value;
+			OriginalArray[index] = value;
 			return true;
 		}
 		else { return false; }
 	}
 	int Find(T value) {
 		for (int i = 0; i < _Size; i++) {
-			if (OrignalArray[i] == value) return i;
+			if (OriginalArray[i] == value) return i;
 		}
 		return -1;
 	}
@@ -106,51 +103,68 @@ public:
 			return DeleteItemAt(index);
 		}
 	}
-	int Size() { return _Size; }
-
-	bool IsEmpty() { return Size() == 0; }
-
+	int Size() {
+		return _Size;
+	}
+	bool IsEmpty() {
+		return Size() == 0;
+	}
 	void PrintList() {
 		for (int i = 0; i < _Size; i++)
 		{
-			cout << OrignalArray[i] << " ";
+			cout << OriginalArray[i] << " ";
 		}
 		cout << endl;
 	}
 	T GetItem(int index) {
-		return OrignalArray[index];
+		return OriginalArray[index];
 	}
 	void Reverse() {
 		T* tempArray = new T[_Size];
 		for (int i = 0; i < _Size; i++) {
-			tempArray[i] = OrignalArray[_Size - 1 - i];
+			tempArray[i] = OriginalArray[_Size - 1 - i];
 		}
-		delete[] OrignalArray;
-		OrignalArray = tempArray;
+		delete[] OriginalArray;
+		OriginalArray = tempArray;
 	}
 	void Clear() {
-		delete[] OrignalArray;
+		delete[] OriginalArray;
 		_Size = 0;
-		OrignalArray = new T[_Size];
+		OriginalArray = new T[_Size];
 	}
-
-	bool InsertAt(int index, T value) {
-		if (index >= _Size || index < 0)return false;
+	bool InsertAt(T index, T value) {
+		if (index > _Size || index < 0)	return false;
 		_Size++;
-		if (_Size < 0) _Size = 0;
-		T* tempArray = new T[_Size];
+		_TempArray = new T[_Size];
 
-		//before index
-		for (int i = 0; i < index; i++) {
-			tempArray[i] = OrignalArray[i];
+		//copy all before index
+		for (int i = 0; i < index; i++)
+		{
+			_TempArray[i] = OriginalArray[i];
 		}
-		tempArray[index] = value;
-		//after index
-		for (int i = index; i < _Size - 1; i++) {
-			tempArray[i + 1] = OrignalArray[i];
+		_TempArray[index] = value;
+		//copy all after index
+		for (int i = index; i < _Size - 1; i++)
+		{
+			_TempArray[i + 1] = OriginalArray[i];
 		}
-		delete[] OrignalArray;
-		OrignalArray = tempArray;
+
+		delete[] OriginalArray;
+		OriginalArray = _TempArray;
 		return true;
+	}
+	bool InsertAtBeginning(T value) {
+		return InsertAt(0, value);
+	}
+	bool InsertAtEnd(T value) {
+		return InsertAt(_Size, value);
+	}
+	bool InsertBefore(int index, T value) {
+		if (index < 1)index = 1;
+		return InsertAt(index - 1, value);
+	}
+	bool InsertAfter(int index, T value) {
+		if (index >= _Size)index = _Size - 1;
+		return InsertAt(index + 1, value);
 	}
 };

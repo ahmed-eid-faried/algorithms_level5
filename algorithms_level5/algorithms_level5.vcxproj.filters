@@ -101,5 +101,8 @@
     <ClInclude Include="4-ex10.h">
       <Filter>Header Files\soln_</Filter>
     </ClInclude>
+    <ClInclude Include="4-ex11.h">
+      <Filter>Header Files\soln_</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
