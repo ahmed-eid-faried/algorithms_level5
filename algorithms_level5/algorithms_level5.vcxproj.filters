@@ -16,14 +16,17 @@
     <Filter Include="Header Files\DS">
       <UniqueIdentifier>{7758c9a8-8a2b-42b4-916d-40ae88fb44ab}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\soln_clsDblLinkedList">
-      <UniqueIdentifier>{fe917a4b-f20d-467f-bd20-5098e1936ae1}</UniqueIdentifier>
+    <Filter Include="Header Files\soln">
+      <UniqueIdentifier>{9c202126-4997-4d10-b443-d392f0c941a1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\soln_clsMyQueue">
+    <Filter Include="Header Files\soln\soln_clsDynamicArray">
+      <UniqueIdentifier>{0d005ca8-e72d-41c1-ba00-4c5b04fc2b00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\soln\soln_clsMyQueue">
       <UniqueIdentifier>{6687a815-26e1-4ee3-8925-bcec8e8874b0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\soln_">
-      <UniqueIdentifier>{0d005ca8-e72d-41c1-ba00-4c5b04fc2b00}</UniqueIdentifier>
+    <Filter Include="Header Files\soln\soln_clsDblLinkedList">
+      <UniqueIdentifier>{fe917a4b-f20d-467f-bd20-5098e1936ae1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -36,73 +39,76 @@
       <Filter>Header Files\DS</Filter>
     </ClInclude>
     <ClInclude Include="1-ex1.h">
-      <Filter>Header Files\soln_clsDblLinkedList</Filter>
+      <Filter>Header Files\soln\soln_clsDblLinkedList</Filter>
     </ClInclude>
     <ClInclude Include="1-ex2.h">
-      <Filter>Header Files\soln_clsDblLinkedList</Filter>
+      <Filter>Header Files\soln\soln_clsDblLinkedList</Filter>
     </ClInclude>
     <ClInclude Include="1-ex3.h">
-      <Filter>Header Files\soln_clsDblLinkedList</Filter>
+      <Filter>Header Files\soln\soln_clsDblLinkedList</Filter>
     </ClInclude>
     <ClInclude Include="1-ex4.h">
-      <Filter>Header Files\soln_clsDblLinkedList</Filter>
+      <Filter>Header Files\soln\soln_clsDblLinkedList</Filter>
     </ClInclude>
     <ClInclude Include="1-ex5.h">
-      <Filter>Header Files\soln_clsDblLinkedList</Filter>
+      <Filter>Header Files\soln\soln_clsDblLinkedList</Filter>
     </ClInclude>
     <ClInclude Include="1-ex6.h">
-      <Filter>Header Files\soln_clsDblLinkedList</Filter>
+      <Filter>Header Files\soln\soln_clsDblLinkedList</Filter>
     </ClInclude>
     <ClInclude Include="DblLinkedListEx.h">
-      <Filter>Header Files\soln_clsDblLinkedList</Filter>
+      <Filter>Header Files\soln\soln_clsDblLinkedList</Filter>
     </ClInclude>
     <ClInclude Include="1-ex7.h">
-      <Filter>Header Files\soln_clsDblLinkedList</Filter>
+      <Filter>Header Files\soln\soln_clsDblLinkedList</Filter>
     </ClInclude>
     <ClInclude Include="1-ex8.h">
-      <Filter>Header Files\soln_clsDblLinkedList</Filter>
+      <Filter>Header Files\soln\soln_clsDblLinkedList</Filter>
     </ClInclude>
     <ClInclude Include="clsMyQueue.h">
       <Filter>Header Files\DS</Filter>
     </ClInclude>
     <ClInclude Include="clsMyQueueEx.h">
-      <Filter>Header Files\soln_clsMyQueue</Filter>
+      <Filter>Header Files\soln\soln_clsMyQueue</Filter>
     </ClInclude>
     <ClInclude Include="clsMyQueueExtensions.h">
-      <Filter>Header Files\soln_clsMyQueue</Filter>
+      <Filter>Header Files\soln\soln_clsMyQueue</Filter>
     </ClInclude>
     <ClInclude Include="clsMyStack.h">
       <Filter>Header Files\DS</Filter>
-    </ClInclude>
-    <ClInclude Include="clsMyStackEx.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="clsDynamicArray.h">
       <Filter>Header Files\DS</Filter>
     </ClInclude>
     <ClInclude Include="clsDynaminArrayEx.h">
-      <Filter>Header Files\soln_</Filter>
+      <Filter>Header Files\soln\soln_clsDynamicArray</Filter>
     </ClInclude>
     <ClInclude Include="4-ex1.h">
-      <Filter>Header Files\soln_</Filter>
+      <Filter>Header Files\soln\soln_clsDynamicArray</Filter>
     </ClInclude>
     <ClInclude Include="4-ex2.h">
-      <Filter>Header Files\soln_</Filter>
+      <Filter>Header Files\soln\soln_clsDynamicArray</Filter>
     </ClInclude>
     <ClInclude Include="4-ex5.h">
-      <Filter>Header Files\soln_</Filter>
+      <Filter>Header Files\soln\soln_clsDynamicArray</Filter>
     </ClInclude>
     <ClInclude Include="4-ex6.h">
-      <Filter>Header Files\soln_</Filter>
+      <Filter>Header Files\soln\soln_clsDynamicArray</Filter>
     </ClInclude>
     <ClInclude Include="4-ex8.h">
-      <Filter>Header Files\soln_</Filter>
+      <Filter>Header Files\soln\soln_clsDynamicArray</Filter>
     </ClInclude>
     <ClInclude Include="4-ex10.h">
-      <Filter>Header Files\soln_</Filter>
+      <Filter>Header Files\soln\soln_clsDynamicArray</Filter>
     </ClInclude>
     <ClInclude Include="4-ex11.h">
-      <Filter>Header Files\soln_</Filter>
+      <Filter>Header Files\soln\soln_clsDynamicArray</Filter>
+    </ClInclude>
+    <ClInclude Include="clsMyStackEx.h">
+      <Filter>Header Files\soln</Filter>
+    </ClInclude>
+    <ClInclude Include="clsMyQueueArr.h">
+      <Filter>Header Files\DS</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
