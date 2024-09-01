@@ -42,7 +42,19 @@ public:
 		// ╩═╧э╦ ╟с═╠у ┼сь ╟с═╠у ╟с╠╧э╧
 		_Size = newSize;
 	}
-
+	void DeleteItemAt(int index) {
+		_Size--;
+		if (_Size < 0) _Size = 0;
+		T* tempArray = new T[_Size];
+		int counter = 0;
+		for (int i = 0; i < _Size; i++) {
+			if (counter == index) 	counter++;
+			tempArray[i] = OrignalArray[counter];
+			counter++;
+		}
+		delete[] OrignalArray;
+		OrignalArray = tempArray;
+	}
 
 	bool SetItem(int index, T value) {
 		if (index >= 0 && index < _Size) {

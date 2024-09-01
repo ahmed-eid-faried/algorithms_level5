@@ -140,6 +140,7 @@
     <ClInclude Include="1-ex8.h" />
     <ClInclude Include="4-ex1.h" />
     <ClInclude Include="4-ex2.h" />
+    <ClInclude Include="4-ex5.h" />
     <ClInclude Include="clsDblLinkedList.h" />
     <ClInclude Include="clsDynamicArray.h" />
     <ClInclude Include="clsDynaminArrayEx.h" />

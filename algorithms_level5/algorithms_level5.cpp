@@ -16,6 +16,7 @@
 #include "clsDynaminArrayEx.h"
 #include "4-ex1.h"
 #include "4-ex2.h"
+#include "4-ex5.h"
 
 int main()
 {
@@ -36,7 +37,8 @@ int main()
    ///////////////////////////////////
    //clsDynaminArrayEx();
    //clsDynamicArrayResize();
-	clsDynamicArrayExtensions2();
+	//clsDynamicArrayExtensions2();
+	 clsDynamicArrayExtensions5();
 	///////////////////////////////////
 
 
